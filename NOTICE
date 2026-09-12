@@ -1,0 +1,25 @@
+lean4cobol contains a COBOL port of lean4lean, by Mario Carneiro and
+contributors, licensed under Apache-2.0. Reference revision:
+bce3448115f7819fc12d647fadd3bb090666637e (arena branch).
+https://github.com/digama0/lean4lean
+
+The port changes the implementation language and data representation.
+The compiled quotation tables are generated from the same pinned lean4lean
+source; tests/primitive-quotes.lean and scripts/generate-primitive-quotes.py
+record their derivation.
+
+The NDJSON fixtures under tests/fixtures/inductive are exports of Lean Kernel
+Arena tutorial cases, licensed under Apache-2.0. Their source revision and
+content hashes are recorded in that directory's manifest.json.
+https://github.com/leanprover/lean-kernel-arena
+
+The NDJSON fixtures under tests/fixtures/primitive, mutual, nested, arithmetic, and strings include
+exports from Lean 4's
+Init library, by Microsoft Corporation and contributors, licensed under
+Apache-2.0. The toolchain, exporter revision, command, and content hash are
+recorded in that directory's manifest.json.
+https://github.com/leanprover/lean4
+
+The fixed fuel-boundary fixture under tests/fixtures/fuel is generated from
+lean4lean's TypeChecker methods at the reference revision above. Its Lean source
+and hashes are recorded alongside the fixture.

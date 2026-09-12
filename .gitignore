@@ -2,3 +2,6 @@
 _tmp/
 *.o
 *.eir
+bin/
+__pycache__/
+tests/generated/

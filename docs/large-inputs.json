@@ -1,0 +1,16 @@
+{
+  "reference_revision": "bce3448115f7819fc12d647fadd3bb090666637e",
+  "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+  "mathlib_revision": "5e932f97dd25535344f80f9dd8da3aab83df0fe6",
+  "mathlib_records": 100001405,
+  "inputs": {
+    "_tmp/arena/_build/tests/mathlib.ndjson": {
+      "bytes": 5636308621,
+      "sha256": "ca2ec20fd063b61e71867b2975c81bd989af9f879b4886b8f08cd23c767a47bb"
+    },
+    "_tmp/arena/_build/tests/init.ndjson": {
+      "bytes": 324561407,
+      "sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91"
+    }
+  }
+}

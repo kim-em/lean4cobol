@@ -1,0 +1,7 @@
+{
+  "source": "tests/mutual.lean",
+  "source_sha256": "62545f6aacb4ccbe7acc602a897b00c4708a90d224fe8a5726b8aa14b249cce3",
+  "toolchain": "leanprover/lean4:v4.33.0-rc2",
+  "exporter_revision": "a3e35a584f59b390667db7269cd37fca8575e4bf",
+  "sha256": "f3eb280c5d78f204bfa3a813793f1d528becf41ca6404097b28a9ef9b89c3d5f"
+}

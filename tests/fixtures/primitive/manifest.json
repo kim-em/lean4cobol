@@ -1,0 +1,17 @@
+{
+  "source": "Lean 4.33.0-rc2 Init",
+  "toolchain": "leanprover/lean4:v4.33.0-rc2",
+  "exporter_revision": "a3e35a584f59b390667db7269cd37fca8575e4bf",
+  "command": "lean4export Init -- Nat.add Nat.pred Nat.sub Nat.mul Nat.pow Nat.beq Nat.ble Nat.shiftLeft",
+  "sha256": "26299755a6239b24a5ef735c5b246973200d083819cb7eff4835a1f24c8c6406",
+  "division": {
+    "command": "lean4export Init -- Nat.mod Nat.div",
+    "sha256": "6dda72f9c35235e794527ee80c82b02e75e22ea5dbc3419880e80a3151c0c544"
+  },
+  "well_founded": {
+    "source": "tests/well-founded.lean",
+    "source_sha256": "392d9c88b2ab3df26ca2dc9e2930acf5d050fa6c10a0a2c73de5c9806d8e33fb",
+    "command": "lake env lean tests/well-founded.lean (in pinned reference checkout)",
+    "sha256": "e2e4a19c8ffbd778e15cad3443833085a83b50b078b9a3dde48c6cfcab10b8f6"
+  }
+}

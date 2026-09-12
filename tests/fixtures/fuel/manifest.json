@@ -1,0 +1,8 @@
+{
+  "reference": "bce3448115f7819fc12d647fadd3bb090666637e",
+  "source": "tests/fuel.lean",
+  "source_sha256": "c6cdeb72152992a46343235ee408734b43f39c3e1fea82c1a7e134e9bfce2f89",
+  "stream_sha256": "bca11980dd6ea7922094cde4935358e41498b92e9316a0d462bfb051bf453dc2",
+  "checks": 544,
+  "command": "lake env lean --run /home/kim/lean4cobol/tests/fuel.lean"
+}

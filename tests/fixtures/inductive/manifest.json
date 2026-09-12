@@ -1,0 +1,97 @@
+{
+  "source": "leanprover/lean-kernel-arena",
+  "revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+  "exporter": "Lean 4.29.1 / lean4export 3.1.0",
+  "files": [
+    {
+      "file": "036_empty.ndjson",
+      "expected": 0,
+      "sha256": "030852937308e66cb90de3b8de7cd336f3d825e81c87c5be5cc1fe33c6d54356"
+    },
+    {
+      "file": "037_boolType.ndjson",
+      "expected": 0,
+      "sha256": "02053d077abf5a63594d1025f9ef2f90dfff65f331503aa3b7486bbbb997b3e8"
+    },
+    {
+      "file": "039_andType.ndjson",
+      "expected": 0,
+      "sha256": "d81009480e131d451da9e625fe9a90fff92fbee08d324aefd6fde3c3b89979e1"
+    },
+    {
+      "file": "043_eqType.ndjson",
+      "expected": 0,
+      "sha256": "d45ed54cc74be3d7d92aae6bacc040420ba33f23fa034b4497edb389e089afdc"
+    },
+    {
+      "file": "044_natDef.ndjson",
+      "expected": 0,
+      "sha256": "95d33f871f126e234740e05d9291a1cedcc6a2d01522aedc3122b25aab17ab95"
+    },
+    {
+      "file": "045_rbTreeDef.ndjson",
+      "expected": 0,
+      "sha256": "d9781f44fcb7e46ff06da1c8a273a4fec4ae989e4114d6668720bd5b87c20b79"
+    },
+    {
+      "file": "064_twoBoolRec.ndjson",
+      "expected": 0,
+      "sha256": "db0e10d735a9a2438ee353c095f8b0d53847d78e5910adee5218925048c8e2e6"
+    },
+    {
+      "file": "068_punitRec.ndjson",
+      "expected": 0,
+      "sha256": "331c4d8a6de6accecf264219290e102544368dffd5eec64e3587716e3b4880ea"
+    },
+    {
+      "file": "079_prodRecEqns.ndjson",
+      "expected": 0,
+      "sha256": "8c723172049fcdb9db3668bdb5035ee9dfe9dfc7c2eb42163de44748194d4097"
+    },
+    {
+      "file": "095_projDataIndexRec.ndjson",
+      "expected": 0,
+      "sha256": "b416173b8862d956e302ece51bdf2ed5dbf1e519ac3c709f2d1d2b5400d88b80"
+    },
+    {
+      "file": "099_ruleK.ndjson",
+      "expected": 0,
+      "sha256": "9c06a9ca2b5d6dadc1575796a858d5285695d4401cceaaf77d9c26fbc426f1da"
+    },
+    {
+      "file": "103_natLitEq.ndjson",
+      "expected": 0,
+      "sha256": "749491a9044aa7df27cbc7afa32d08dc4d5feaea1eb19c28cd98790d7db8adf8"
+    },
+    {
+      "file": "110_indexedUnitEta.ndjson",
+      "expected": 1,
+      "sha256": "f1b07164d2f71bbeb2de6af4e9163c4b1bcceb4751e89b4b0dc2e0faa40c5d1d"
+    },
+    {
+      "file": "111_structEta.ndjson",
+      "expected": 0,
+      "sha256": "e47bd6975be97f3218b31e85071af1e0cec4279f5a6478abb12e3e1c574c35c2"
+    },
+    {
+      "file": "123_rtreeRecReduction.ndjson",
+      "expected": 0,
+      "sha256": "1d4eacdbbdbe3edc8ea1faf3526eef09beadbbd2843b5dba67262f405b781330"
+    },
+    {
+      "file": "125_accRecReduction.ndjson",
+      "expected": 0,
+      "sha256": "3ea1584059e9bb2ed3f9dbea8e58c9c6f78592f80a20c5cb159ae92bb9079f7f"
+    },
+    {
+      "file": "131_quotLiftReduction.ndjson",
+      "expected": 0,
+      "sha256": "ae980cf502f90c84131b1705850c1acf18a969fdc1fe511b9b8eb769adbd79c8"
+    },
+    {
+      "file": "132_quotIndReduction.ndjson",
+      "expected": 0,
+      "sha256": "0053779f82af2dfc35cd6c866a66be4496008589b11c22e6b80e91835957bedd"
+    }
+  ]
+}

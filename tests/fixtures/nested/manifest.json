@@ -1,0 +1,7 @@
+{
+  "source": "tests/nested.lean",
+  "source_sha256": "abf68371ca8b4df829d6c2d9da3d18e9be436cf6c1cd353833c1f54b3f42526c",
+  "toolchain": "leanprover/lean4:v4.33.0-rc2",
+  "exporter_revision": "a3e35a584f59b390667db7269cd37fca8575e4bf",
+  "sha256": "c1f9dad262914e362e1e79ef5352f1527e0ef37305d633bd1290eaf6fc3b9117"
+}

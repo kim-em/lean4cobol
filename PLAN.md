@@ -1,6 +1,10 @@
 # lean4cobol: a Lean 4 kernel in COBOL
 
-Status: plan only (2026-09-12). Nothing implemented yet.
+Status: required scope implemented and validated (2026-09-12). All 142 tutorial
+verdicts match the reference; init-prelude is accepted; the 215-case arena run has
+206 reference matches, nine declines, and no wrong verdicts or errors. The init
+stretch target reaches the 600-second wall limit. See `docs/progress.md` and
+`docs/results.json` for the audit and measurements.
 
 ## Goal
 
@@ -86,7 +90,7 @@ kernel; the port follows lean4lean.
   lor, xor, shiftLeft, shiftRight, pow (exponent cap 2^24), log2. The bitwise ones
   convert to binary limbs internally. Cross-check against the Lean reference on random
   inputs (a small `tests/nat.lean` generates cases).
-- **Strings** expanded to `String.mk` of a `Char` list on demand, as lean4lean does.
+- **Strings** expanded to `String.ofList` of a `Char` list on demand, as the pinned lean4lean revision does.
 - **Parser**: read the NDJSON file as `ORGANIZATION LINE SEQUENTIAL` with a large
   record (`PIC X(4000000)`; lean4export lines for `init-prelude` are far shorter, but
   measure the longest line in `init` before fixing the size, or fall back to

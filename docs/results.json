@@ -1,0 +1,2036 @@
+{
+  "date": "2026-09-12",
+  "reference_revision": "bce3448115f7819fc12d647fadd3bb090666637e",
+  "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+  "compiler": "GnuCOBOL 3.2.0",
+  "cpu": "AMD EPYC 9455 48-Core Processor",
+  "kernel": "Linux 6.12.100 x86_64",
+  "summary": {
+    "match": 206,
+    "declared_decline": 5,
+    "declined": 4
+  },
+  "arena_summary": {
+    "correct": 191,
+    "either": 15,
+    "declined": 9,
+    "wrong": 0,
+    "errors": 0
+  },
+  "source_sha256": {
+    "Makefile": "3747562181db6679e19b727d44c4d003951bb1365bbcba268624405c4442ff8f",
+    "arena/lean4cobol.yaml": "79929afb4df93c91b2daf4bf4fbc80f665fec87f75e3475408dd662cd565a7ec",
+    "src/arena.cob": "d1dfc4aef2db0b191968d37e0cbd3f158e1aaef4149e44edddc04a2590df1090",
+    "src/bignum.cob": "1291f59c42d4c242ed561eee48697605a87574fdf160a95bd6f5bbda6125bb9f",
+    "src/blob.cob": "6cbd301c9fc6b79313237029b94942eafe05c550bbe12da27e1385fb69d6538a",
+    "src/defeq.cob": "4fd3e917ed4b6dc99e413d82c37c9e9347b3dfc43a38f4b5076eeb8f49f63c24",
+    "src/environment.cob": "afce9b3f3855f179bfecb142aa0f3aaea1b0fe7ba52f04f4a56caf58e35e4e14",
+    "src/equiv.cob": "7bbec068ca24aec0b03cee6587e450cf28034f902519d783a220170117aba6a3",
+    "src/expr-build.cob": "bbce95233c0bd4119d3bdd87f6db7fc27562c3f16a725cc9f5990f3c02cfa7a5",
+    "src/expr-ops.cob": "357a3747ab787aee5c6846a13d07559bdcb75ec86084f85f7f5edea239f5bced",
+    "src/expr.cob": "3914257ec49eb899423a0b85d0db3c413e1124f6836b31c66a6c6993ad6fee92",
+    "src/hashtab.cob": "cf7a33db18f4a8270b3a73031033ca3f0ef9a9a5969b01154e192e3ed5175295",
+    "src/inductive-generate.cob": "ced98e340b44462912d28b55fdbb5fd532f51fa2ea239c8e9cf302109af92cf9",
+    "src/inductive-reduce.cob": "9f275e281413f4e2793faaf9e18c5b8c2eba90258ca5657bd23439c57812d507",
+    "src/inductive.cob": "ec860d25a1be005d65e06e4491ff53697d86ddfb6553427df21d5f38fc5ccf39",
+    "src/json.cob": "b736b9701711191111405ec0d59f65ff1af552acfdf097a3f08bea07b1a46ffc",
+    "src/level-native.cob": "e9e5b92cca917d06417449d0b056b1d552aef1be2a886ba09dca2f189cc30493",
+    "src/level.cob": "0d7e600744fec1cbc17d4c125290580c5d3bd950b0dca48c877998144385c058",
+    "src/list.cob": "a43c5e4a6d2f8be15dcf3614934a96f06b5d50b2360ebce86d215fd964c9240a",
+    "src/main.cob": "d45e7a6b4c4d52e233b5abf17d0daf6a85d4de70721780ea5203dd6703b1a3e3",
+    "src/name.cob": "4f21dcc56925dd359b9f8022d3a0b30d08ba6268c2db3a7c3d610fa7f889b5da",
+    "src/nat-literal.cob": "37d6de6c9e0c256e523ae1ac280194f2ddea608dc5b5ae8b7f2b13fcbfe62843",
+    "src/nat-reduce.cob": "7ec204ad85aa92d54273c98d203f9eba581ce5b275489f168ce7d72fe3349a51",
+    "src/nested-lower.cob": "0121756d60b8d79121b88865868631f155ffc73565cd85be7174fb23d17a8404",
+    "src/nested-restore.cob": "b5ef612faa18388181fc9574610c2098f028eb230ac5921222e3b6e073e1eaef",
+    "src/nested-support.cob": "e1b06ac346c65542f3de03de553e48e866b10c3c1f1b7c820dcdb76a7a53113c",
+    "src/parser-decl.cob": "8a3d7f565673a757a3e45541913e8b53f091fb642e844e811cd7a2414e349633",
+    "src/parser-expr.cob": "a8eb7f31873955c36ba299a7633e6273b5bb8d2dd46160ac3b55d6b74fb7a322",
+    "src/parser.cob": "96b02b454c57b7972edfa82ceb315c113cd49632a9ce707ed5deeee2e14925f7",
+    "src/primitive-equations.cob": "7e0b570dcf499ec096232818e936e8a317f2f138354f60958e51c2fef7bdb16f",
+    "src/primitive-quotes.cob": "0bbae010e56b70a71db781d2e2d681860b56435154bc45b8ca789ba6f4bc0efa",
+    "src/primitive-reflection.cob": "84940afae87e8d709ae42369f4ddc0badd79ae6c7ebea26a6e9134512a7cf339",
+    "src/primitive-well-founded.cob": "091299a857fa5b2a19346eee40d400c261637e5545435f3a68772f63f10c221c",
+    "src/primitive-wf-support.cob": "7906ec36ccc48bbe6ed7cea80b2443aad9b3d039b94b19e3a803488ee60e55f0",
+    "src/primitive.cob": "4e0cbeb71ad65f5050dbbd43f529d50358451db774e9bcdef47a305a7803812f",
+    "src/projection.cob": "ade49623fa63350c95f55fba6d54d84e88c15c0510ef97716185419480e9f115",
+    "src/quot.cob": "5e654b8cc48e576936875e5c1c47b3d89d41fd73e0fdf2fc6feefc81b5efaefb",
+    "src/reduction.cob": "1bd0bf44534fd3f1af358b2223f099c41ac2fd77b32d9911eda772b525747f6a",
+    "src/replay.cob": "45c875674c454f7265db7190962319e34b919472aa1ecb19b581b4222a852ac7",
+    "src/stream.cob": "0ae4eb259f4262a7ad90bdc384c86ff9352074340ee072c09e5fd4db3731cdd3",
+    "src/string-literal.cob": "446398ac99d7b6ab649885868d3775dabd0554c5b16726d25235b93e275aeccd",
+    "src/tc-cache.cob": "0c1e216c2ac7b3f0b5a8a3855275594f80058b0c76a98f7b1de615cbfdc08115",
+    "src/tc-methods.cob": "ddda46f7d1403b3ccc36b154ad16df3739219cfdac9cbbc27910da5d5350558e",
+    "src/tc-spines.cob": "2dfb3536fd3b072596be8a517e20eb33ec880050b50a759d0e816ecc81cb41ea",
+    "src/transform-cache.cob": "45e01335793a7653a304671623e72cfe4b62e62ab948551c52d8bad9e17f5776",
+    "src/type-checker.cob": "96edc8d8e09e33093ce8d7ade6a586fb2e850784dc4d729818717245edb846ce",
+    "src/copy/blob.cpy": "06cf331ec5944521fca48345e88b3221b234f71690fef2251683f608cde6a4fe",
+    "src/copy/declarations.cpy": "e2c7a716e7154216339dab56fcc985deac647a35675860b5b6ca2ddf5b640144",
+    "src/copy/expr.cpy": "14f3e58735104ff1cc20cda1bbf15078d8cbe374f022fd593df91e10a94a2fef",
+    "src/copy/inductive-arena.cpy": "c656174471b5e5743eed0155bfea713a8a90b4fe52d9c507a2de9421e5a34709",
+    "src/copy/inductive.cpy": "2d5f7e9dff50445ee50a8f320772099fb6e99e011a1fe90a887d892122033f11",
+    "src/copy/json.cpy": "dc44ecb9f6a19df5db3a508ea97c8511ecb2024fd9a97eb2f8288c6909b5f1d2",
+    "src/copy/levels.cpy": "67266f21961a482f359d5813abea69512d16192bbde5b6b46b981642d262ee2e",
+    "src/copy/list.cpy": "d859f757d8143b4e93e10673640b1545c29726634c529c32f7797b3eee40a5aa",
+    "src/copy/names.cpy": "bf4f9cc392fe595364e21a7b506e8919ed89ceae8f1782f62b96297ba156f0a2",
+    "src/copy/nested-arena.cpy": "7bf2592d249a105e760317e94626e97c115b78f3a2ec996292da7bbf5c693260",
+    "src/copy/nested-callback.cpy": "73bf413a0080e162827e8ad8b984bb6b17fff7061f0767d5b78127d53e94f741",
+    "src/copy/normal-state.cpy": "e9118887f052c68a54f07872e9dc99636d8b8f8e8cb13150044b1bb24d6f3199",
+    "src/copy/normal-tables.cpy": "8ebbb43689cad3531a19fb64a4b5833ca84e09fdb88190a89de0c227a802c492",
+    "src/copy/normal.cpy": "3a559829f9ac9763b65b7c560b4960536660e5805d91d8704706d8ed4e9233a4",
+    "src/copy/parser-state.cpy": "838082114288f5c22dde776e4b56d970dee60244ef2b93b592a5708842467e63",
+    "src/copy/quote-cache.cpy": "a4d3873117f7c65f4f01a825f4f8d08a1b577387430b0e461b2462c1a32ec57f",
+    "src/copy/quote-data.cpy": "b31ac61551d43106022473a290fcbe95e1f692910d3dfb7cae925dafc718fa14",
+    "src/copy/quote-select.cpy": "624638f80bf8e25a332dafa8f5c6ded701fbeac579ecd638efb818b648901159",
+    "src/copy/reflection.cpy": "77bc6d2e2fb111d072e0a2c9787467998604eaa03efb65a93d6b76f2077371e5",
+    "src/copy/state.cpy": "950f553dfa9350f891d2093cdc6792582a90df1f1842c010621e97928dffa21b",
+    "src/copy/stream.cpy": "27617f87f0c9ca1c33fc417a476d3c4d14aeda6a620d71267eb930a62751ab1b",
+    "src/copy/tc-context.cpy": "73a2e24a630bfd17dd26af6eb683a32008685826c0e6b7d9f6a77db6df52ea2f",
+    "src/copy/transform-views.cpy": "8e54b6d37d0e5993568d7007fcf5cd4e9b8b2eb2d00b1e42cc4e483a93eda875",
+    "src/copy/transform.cpy": "351e30b1a4572c35278cd34c583456f42b71d8432a822cbb6340f34bc9582c16"
+  },
+  "init_direct_profile": {
+    "exit": 124,
+    "instructions_u": 9399164836088,
+    "elapsed_seconds": 600.070578633,
+    "user_seconds": 597.17976,
+    "system_seconds": 1.032536
+  },
+  "results": [
+    {
+      "test": "bogus1",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.013502845000000001,
+      "instructions": 116320069,
+      "peak_rss_bytes": 13484032
+    },
+    {
+      "test": "cedar",
+      "comparison": "declared_decline",
+      "checker_exit": 2,
+      "reference_exit": null,
+      "seconds": 0,
+      "instructions": 0,
+      "peak_rss_bytes": 0
+    },
+    {
+      "test": "con-leche",
+      "comparison": "declared_decline",
+      "checker_exit": 2,
+      "reference_exit": null,
+      "seconds": 0,
+      "instructions": 0,
+      "peak_rss_bytes": 0
+    },
+    {
+      "test": "constlevels",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.017052111000000002,
+      "instructions": 170479198,
+      "peak_rss_bytes": 13504512
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-acc",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.071923207,
+      "instructions": 1043996944,
+      "peak_rss_bytes": 14262272
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-acc-left",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.070642907,
+      "instructions": 1038708880,
+      "peak_rss_bytes": 14331904
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-acc-right",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.073752441,
+      "instructions": 1094490563,
+      "peak_rss_bytes": 14315520
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-quot",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.01303436,
+      "instructions": 125032590,
+      "peak_rss_bytes": 13578240
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-quot-left",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.013296599000000001,
+      "instructions": 126845643,
+      "peak_rss_bytes": 13557760
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-quot-left-def",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.014349972,
+      "instructions": 144601925,
+      "peak_rss_bytes": 13561856
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-quot-right",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.012181735,
+      "instructions": 127490751,
+      "peak_rss_bytes": 13533184
+    },
+    {
+      "test": "corner-cases/imax-right-successor",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006723707000000001,
+      "instructions": 28652639,
+      "peak_rss_bytes": 12787712
+    },
+    {
+      "test": "corner-cases/positivity-whnf",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007239983,
+      "instructions": 49726965,
+      "peak_rss_bytes": 13545472
+    },
+    {
+      "test": "corner-cases/proj-maybe-prop",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.009966188,
+      "instructions": 86790094,
+      "peak_rss_bytes": 13586432
+    },
+    {
+      "test": "corner-cases/proj-maybe-prop-past",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.009245759000000001,
+      "instructions": 86479709,
+      "peak_rss_bytes": 13533184
+    },
+    {
+      "test": "corner-cases/proof-param-ok",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007016681,
+      "instructions": 51543828,
+      "peak_rss_bytes": 13524992
+    },
+    {
+      "test": "corner-cases/proof-param-swap",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006785537,
+      "instructions": 42721180,
+      "peak_rss_bytes": 13606912
+    },
+    {
+      "test": "corner-cases/subject-reduction-redex",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.073269544,
+      "instructions": 1096030608,
+      "peak_rss_bytes": 14327808
+    },
+    {
+      "test": "corner-cases/subject-reduction-reduct",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.069284601,
+      "instructions": 1042359062,
+      "peak_rss_bytes": 14348288
+    },
+    {
+      "test": "cslib",
+      "comparison": "declared_decline",
+      "checker_exit": 2,
+      "reference_exit": null,
+      "seconds": 0,
+      "instructions": 0,
+      "peak_rss_bytes": 0
+    },
+    {
+      "test": "ctor-num-fields",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.026510305,
+      "instructions": 359201115,
+      "peak_rss_bytes": 13565952
+    },
+    {
+      "test": "extra-rec",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.005773948,
+      "instructions": 31077518,
+      "peak_rss_bytes": 12746752
+    },
+    {
+      "test": "init",
+      "comparison": "declined",
+      "checker_exit": 2,
+      "reference_exit": null,
+      "seconds": 600.138982807,
+      "instructions": 8847483839316,
+      "peak_rss_bytes": 2817372160
+    },
+    {
+      "test": "init-prelude",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 4.278105119,
+      "instructions": 66005820983,
+      "peak_rss_bytes": 60256256
+    },
+    {
+      "test": "k-rec-conv",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.014958304,
+      "instructions": 153908963,
+      "peak_rss_bytes": 13500416
+    },
+    {
+      "test": "large-elim-param",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.009135805,
+      "instructions": 57220532,
+      "peak_rss_bytes": 13578240
+    },
+    {
+      "test": "large-elim-prop-bool",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.019683484,
+      "instructions": 222994566,
+      "peak_rss_bytes": 13598720
+    },
+    {
+      "test": "level-imax-leq",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.008934867,
+      "instructions": 54746069,
+      "peak_rss_bytes": 13578240
+    },
+    {
+      "test": "level-imax-normalization",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.008527542,
+      "instructions": 55508593,
+      "peak_rss_bytes": 13520896
+    },
+    {
+      "test": "level-index-out-of-order",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007065353000000001,
+      "instructions": 25681180,
+      "peak_rss_bytes": 12734464
+    },
+    {
+      "test": "mathlib",
+      "comparison": "declared_decline",
+      "checker_exit": 2,
+      "reference_exit": null,
+      "seconds": 0,
+      "instructions": 0,
+      "peak_rss_bytes": 0
+    },
+    {
+      "test": "nat-rec-k-lie",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007993309,
+      "instructions": 67158777,
+      "peak_rss_bytes": 13500416
+    },
+    {
+      "test": "nat-rec-rules",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.010420341000000001,
+      "instructions": 73913994,
+      "peak_rss_bytes": 13570048
+    },
+    {
+      "test": "nested-nonuniform-param",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.012780522,
+      "instructions": 114733830,
+      "peak_rss_bytes": 13574144
+    },
+    {
+      "test": "nested-unused-param",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.05438561200000001,
+      "instructions": 794911081,
+      "peak_rss_bytes": 14356480
+    },
+    {
+      "test": "orphan-ctor",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006656526,
+      "instructions": 31078036,
+      "peak_rss_bytes": 12746752
+    },
+    {
+      "test": "orphan-rec",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007022850000000001,
+      "instructions": 31122665,
+      "peak_rss_bytes": 12775424
+    },
+    {
+      "test": "perf/app-lam",
+      "comparison": "declined",
+      "checker_exit": 2,
+      "reference_exit": null,
+      "seconds": 162.291892337,
+      "instructions": 2025337920344,
+      "peak_rss_bytes": 2332164096
+    },
+    {
+      "test": "perf/args-before-unfold",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.21551213700000002,
+      "instructions": 2941076468,
+      "peak_rss_bytes": 21450752
+    },
+    {
+      "test": "perf/beta-ladder",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 47.20457913400001,
+      "instructions": 711386268351,
+      "peak_rss_bytes": 1175945216
+    },
+    {
+      "test": "perf/church-numerals",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.662081378,
+      "instructions": 9785602061,
+      "peak_rss_bytes": 122118144
+    },
+    {
+      "test": "perf/discarded-argument",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 7.819965627,
+      "instructions": 133476372901,
+      "peak_rss_bytes": 16740352
+    },
+    {
+      "test": "perf/discarded-argument-match",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 20.494416577000003,
+      "instructions": 332339973491,
+      "peak_rss_bytes": 18317312
+    },
+    {
+      "test": "perf/folded-constant-first",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.282193544,
+      "instructions": 4401539301,
+      "peak_rss_bytes": 29323264
+    },
+    {
+      "test": "perf/folded-constant-last",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.28215749,
+      "instructions": 4358683450,
+      "peak_rss_bytes": 28536832
+    },
+    {
+      "test": "perf/fueled-chain",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 1.234489578,
+      "instructions": 19708232256,
+      "peak_rss_bytes": 25362432
+    },
+    {
+      "test": "perf/grind-ring-5",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 49.257378125,
+      "instructions": 779641419104,
+      "peak_rss_bytes": 447606784
+    },
+    {
+      "test": "perf/identical-nesting",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.011751346000000001,
+      "instructions": 94457131,
+      "peak_rss_bytes": 13508608
+    },
+    {
+      "test": "perf/irrelevance-before-evaluation",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.015995453,
+      "instructions": 169174641,
+      "peak_rss_bytes": 14319616
+    },
+    {
+      "test": "perf/let-ladder",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 24.73213844,
+      "instructions": 388906030609,
+      "peak_rss_bytes": 617037824
+    },
+    {
+      "test": "perf/magma-list-deep-n21",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 62.220506744000005,
+      "instructions": 993590663704,
+      "peak_rss_bytes": 442806272
+    },
+    {
+      "test": "perf/magma-list-deep-n36",
+      "comparison": "declined",
+      "checker_exit": 2,
+      "reference_exit": null,
+      "seconds": 564.0638011660001,
+      "instructions": 8900199465577,
+      "peak_rss_bytes": 3010850816
+    },
+    {
+      "test": "perf/magma-list-pair-n21",
+      "comparison": "declined",
+      "checker_exit": 2,
+      "reference_exit": null,
+      "seconds": 264.91949682200004,
+      "instructions": 4155085156692,
+      "peak_rss_bytes": 3135574016
+    },
+    {
+      "test": "perf/magma-list-pair-n7",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 45.075240556000004,
+      "instructions": 724358323000,
+      "peak_rss_bytes": 760893440
+    },
+    {
+      "test": "perf/magma-string-n4",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 70.119640669,
+      "instructions": 1143619909343,
+      "peak_rss_bytes": 383795200
+    },
+    {
+      "test": "perf/magma-string-pair-n9",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 191.10768523800002,
+      "instructions": 3093777343260,
+      "peak_rss_bytes": 1458544640
+    },
+    {
+      "test": "perf/refute-cheap-first",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.016501233,
+      "instructions": 201376211,
+      "peak_rss_bytes": 14336000
+    },
+    {
+      "test": "perf/refute-cheap-last",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 7.600502535,
+      "instructions": 135807307232,
+      "peak_rss_bytes": 16666624
+    },
+    {
+      "test": "perf/repeated-subproblem",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.01649849,
+      "instructions": 194456953,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "perf/shared-subterm",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.6884234680000001,
+      "instructions": 11514320671,
+      "peak_rss_bytes": 33210368
+    },
+    {
+      "test": "perf/shift-cascade",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.154963485,
+      "instructions": 2528346629,
+      "peak_rss_bytes": 16674816
+    },
+    {
+      "test": "perf/unroll-versus-evaluate",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.0314342,
+      "instructions": 434746594,
+      "peak_rss_bytes": 17461248
+    },
+    {
+      "test": "proj-non-structure",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.008115571,
+      "instructions": 54948356,
+      "peak_rss_bytes": 13520896
+    },
+    {
+      "test": "proj-of-imax-prop",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.014258085,
+      "instructions": 156262628,
+      "peak_rss_bytes": 13549568
+    },
+    {
+      "test": "proj-of-prop",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007488150000000001,
+      "instructions": 46806582,
+      "peak_rss_bytes": 13570048
+    },
+    {
+      "test": "proj-of-stuck-prop",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.275575822,
+      "instructions": 4411687649,
+      "peak_rss_bytes": 16642048
+    },
+    {
+      "test": "proj-of-subst-prop",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.277582659,
+      "instructions": 4527917104,
+      "peak_rss_bytes": 15126528
+    },
+    {
+      "test": "proof-irrel",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.0071373700000000005,
+      "instructions": 36495299,
+      "peak_rss_bytes": 12763136
+    },
+    {
+      "test": "rec-k-lie",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007932039,
+      "instructions": 57181018,
+      "peak_rss_bytes": 13545472
+    },
+    {
+      "test": "rec-missing-ih",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.283160866,
+      "instructions": 4501675002,
+      "peak_rss_bytes": 16715776
+    },
+    {
+      "test": "rec-of-subst-prop",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.300536837,
+      "instructions": 4748653151,
+      "peak_rss_bytes": 15867904
+    },
+    {
+      "test": "sparse-name-index",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006360968000000001,
+      "instructions": 25148722,
+      "peak_rss_bytes": 12730368
+    },
+    {
+      "test": "std",
+      "comparison": "declared_decline",
+      "checker_exit": 2,
+      "reference_exit": null,
+      "seconds": 0,
+      "instructions": 0,
+      "peak_rss_bytes": 0
+    },
+    {
+      "test": "tutorial/001_basicDef",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006092930000000001,
+      "instructions": 25932934,
+      "peak_rss_bytes": 12767232
+    },
+    {
+      "test": "tutorial/002_badDef",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.0064520540000000005,
+      "instructions": 25645590,
+      "peak_rss_bytes": 12812288
+    },
+    {
+      "test": "tutorial/003_arrowType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006314008,
+      "instructions": 26782006,
+      "peak_rss_bytes": 12742656
+    },
+    {
+      "test": "tutorial/004_dependentType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006923603,
+      "instructions": 26749670,
+      "peak_rss_bytes": 12808192
+    },
+    {
+      "test": "tutorial/005_constType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007008338,
+      "instructions": 28879312,
+      "peak_rss_bytes": 12738560
+    },
+    {
+      "test": "tutorial/006_betaReduction",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007494430000000001,
+      "instructions": 32852938,
+      "peak_rss_bytes": 12787712
+    },
+    {
+      "test": "tutorial/007_betaReduction2",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006603958,
+      "instructions": 33720697,
+      "peak_rss_bytes": 12754944
+    },
+    {
+      "test": "tutorial/008_forallSortWhnf",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007149548,
+      "instructions": 32711684,
+      "peak_rss_bytes": 12775424
+    },
+    {
+      "test": "tutorial/009_forallSortBad",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006669406,
+      "instructions": 32602820,
+      "peak_rss_bytes": 12767232
+    },
+    {
+      "test": "tutorial/010_nonTypeType",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006955541000000001,
+      "instructions": 29988419,
+      "peak_rss_bytes": 12750848
+    },
+    {
+      "test": "tutorial/011_nonTypeAxiom",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006691938000000001,
+      "instructions": 29566243,
+      "peak_rss_bytes": 12754944
+    },
+    {
+      "test": "tutorial/012_nonPropThm",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006653072,
+      "instructions": 25866896,
+      "peak_rss_bytes": 12726272
+    },
+    {
+      "test": "tutorial/013_thmProof",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006886919,
+      "instructions": 32901945,
+      "peak_rss_bytes": 12783616
+    },
+    {
+      "test": "tutorial/014_selfProof",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.0063988940000000005,
+      "instructions": 26240750,
+      "peak_rss_bytes": 12787712
+    },
+    {
+      "test": "tutorial/015_levelComp1",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006259327,
+      "instructions": 26538255,
+      "peak_rss_bytes": 12701696
+    },
+    {
+      "test": "tutorial/016_levelComp2",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006444081000000001,
+      "instructions": 26028365,
+      "peak_rss_bytes": 12767232
+    },
+    {
+      "test": "tutorial/017_levelComp3",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006952635,
+      "instructions": 26395150,
+      "peak_rss_bytes": 12771328
+    },
+    {
+      "test": "tutorial/018_levelParams",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006848973,
+      "instructions": 33932869,
+      "peak_rss_bytes": 12759040
+    },
+    {
+      "test": "tutorial/019_tut06_bad01",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006647794,
+      "instructions": 25783694,
+      "peak_rss_bytes": 12783616
+    },
+    {
+      "test": "tutorial/020_levelComp4",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007039776,
+      "instructions": 26417579,
+      "peak_rss_bytes": 12800000
+    },
+    {
+      "test": "tutorial/021_levelComp5",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006868361000000001,
+      "instructions": 26177191,
+      "peak_rss_bytes": 12709888
+    },
+    {
+      "test": "tutorial/022_imax1",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006658991,
+      "instructions": 28306848,
+      "peak_rss_bytes": 12808192
+    },
+    {
+      "test": "tutorial/023_imax2",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.005962196,
+      "instructions": 28349738,
+      "peak_rss_bytes": 12795904
+    },
+    {
+      "test": "tutorial/024_levelMaxComm",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006314409,
+      "instructions": 26936625,
+      "peak_rss_bytes": 12779520
+    },
+    {
+      "test": "tutorial/025_levelMaxAssoc",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.005942447,
+      "instructions": 27854825,
+      "peak_rss_bytes": 12754944
+    },
+    {
+      "test": "tutorial/026_levelMaxIdem",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.0058821080000000005,
+      "instructions": 26277981,
+      "peak_rss_bytes": 12742656
+    },
+    {
+      "test": "tutorial/027_levelMaxAbsorb",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.00598463,
+      "instructions": 26858843,
+      "peak_rss_bytes": 12734464
+    },
+    {
+      "test": "tutorial/028_inferVar",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006468718,
+      "instructions": 27929441,
+      "peak_rss_bytes": 12705792
+    },
+    {
+      "test": "tutorial/029_defEqLambda",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.0062074,
+      "instructions": 33560370,
+      "peak_rss_bytes": 12779520
+    },
+    {
+      "test": "tutorial/030_peano1",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007344137000000001,
+      "instructions": 53646020,
+      "peak_rss_bytes": 13496320
+    },
+    {
+      "test": "tutorial/031_peano2",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008815229,
+      "instructions": 73444850,
+      "peak_rss_bytes": 13524992
+    },
+    {
+      "test": "tutorial/032_peano3",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009942752000000001,
+      "instructions": 87022452,
+      "peak_rss_bytes": 13520896
+    },
+    {
+      "test": "tutorial/033_letType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006356792,
+      "instructions": 27005812,
+      "peak_rss_bytes": 12873728
+    },
+    {
+      "test": "tutorial/034_letTypeDep",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006447846,
+      "instructions": 31620321,
+      "peak_rss_bytes": 12734464
+    },
+    {
+      "test": "tutorial/035_letRed",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.0063375540000000005,
+      "instructions": 27320661,
+      "peak_rss_bytes": 12808192
+    },
+    {
+      "test": "tutorial/036_empty",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006274951,
+      "instructions": 30485075,
+      "peak_rss_bytes": 12763136
+    },
+    {
+      "test": "tutorial/037_boolType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006788042,
+      "instructions": 38295820,
+      "peak_rss_bytes": 12754944
+    },
+    {
+      "test": "tutorial/038_twoBool",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007234564000000001,
+      "instructions": 49670549,
+      "peak_rss_bytes": 13533184
+    },
+    {
+      "test": "tutorial/039_andType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008109102,
+      "instructions": 53820793,
+      "peak_rss_bytes": 13529088
+    },
+    {
+      "test": "tutorial/040_prodType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007989675,
+      "instructions": 58547670,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/041_pprodType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008009303,
+      "instructions": 58438053,
+      "peak_rss_bytes": 13512704
+    },
+    {
+      "test": "tutorial/042_pUnitType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007825782,
+      "instructions": 35398818,
+      "peak_rss_bytes": 12705792
+    },
+    {
+      "test": "tutorial/043_eqType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007896787,
+      "instructions": 53548222,
+      "peak_rss_bytes": 13586432
+    },
+    {
+      "test": "tutorial/044_natDef",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007220594,
+      "instructions": 46076311,
+      "peak_rss_bytes": 13512704
+    },
+    {
+      "test": "tutorial/045_rbTreeDef",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.019959115000000003,
+      "instructions": 245145565,
+      "peak_rss_bytes": 13549568
+    },
+    {
+      "test": "tutorial/046_inductBadNonSort",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007280141,
+      "instructions": 29994565,
+      "peak_rss_bytes": 12767232
+    },
+    {
+      "test": "tutorial/047_inductBadNonSort2",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.0067943510000000006,
+      "instructions": 26838800,
+      "peak_rss_bytes": 12791808
+    },
+    {
+      "test": "tutorial/048_inductLevelParam",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.005673357,
+      "instructions": 25947906,
+      "peak_rss_bytes": 12701696
+    },
+    {
+      "test": "tutorial/049_inductTooFewParams",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006262351,
+      "instructions": 25994001,
+      "peak_rss_bytes": 12705792
+    },
+    {
+      "test": "tutorial/050_inductWrongCtorParams",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006748944000000001,
+      "instructions": 30501574,
+      "peak_rss_bytes": 12828672
+    },
+    {
+      "test": "tutorial/051_inductWrongCtorResParams",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007101156000000001,
+      "instructions": 32987415,
+      "peak_rss_bytes": 12742656
+    },
+    {
+      "test": "tutorial/052_inductWrongCtorResLevel",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007285700000000001,
+      "instructions": 33932495,
+      "peak_rss_bytes": 13496320
+    },
+    {
+      "test": "tutorial/053_inductInIndex",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006228732000000001,
+      "instructions": 29302816,
+      "peak_rss_bytes": 12800000
+    },
+    {
+      "test": "tutorial/054_indNeg",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.00651743,
+      "instructions": 28646153,
+      "peak_rss_bytes": 12808192
+    },
+    {
+      "test": "tutorial/055_reduceCtorParam.mk",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009144708000000001,
+      "instructions": 59863605,
+      "peak_rss_bytes": 13574144
+    },
+    {
+      "test": "tutorial/056_reduceCtorType.mk",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.0068892020000000005,
+      "instructions": 33283094,
+      "peak_rss_bytes": 12705792
+    },
+    {
+      "test": "tutorial/057_indNegReducible",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006666101000000001,
+      "instructions": 34888461,
+      "peak_rss_bytes": 13578240
+    },
+    {
+      "test": "tutorial/058_predWithTypeField",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006666181,
+      "instructions": 35950765,
+      "peak_rss_bytes": 12800000
+    },
+    {
+      "test": "tutorial/059_typeWithTypeField",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006958975,
+      "instructions": 36873905,
+      "peak_rss_bytes": 12709888
+    },
+    {
+      "test": "tutorial/060_typeWithTypeFieldPoly",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006865387000000001,
+      "instructions": 37992706,
+      "peak_rss_bytes": 13574144
+    },
+    {
+      "test": "tutorial/061_typeWithTooHighTypeField.mk",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006169815,
+      "instructions": 28212353,
+      "peak_rss_bytes": 12709888
+    },
+    {
+      "test": "tutorial/062_emptyRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.006492473,
+      "instructions": 31702653,
+      "peak_rss_bytes": 12701696
+    },
+    {
+      "test": "tutorial/063_boolRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007134055,
+      "instructions": 45860011,
+      "peak_rss_bytes": 13635584
+    },
+    {
+      "test": "tutorial/064_twoBoolRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008170563,
+      "instructions": 57599571,
+      "peak_rss_bytes": 13545472
+    },
+    {
+      "test": "tutorial/065_andRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007990256000000001,
+      "instructions": 57405152,
+      "peak_rss_bytes": 13590528
+    },
+    {
+      "test": "tutorial/066_prodRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.00835772,
+      "instructions": 64447274,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/067_pprodRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008638377000000001,
+      "instructions": 64089507,
+      "peak_rss_bytes": 13533184
+    },
+    {
+      "test": "tutorial/068_punitRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007135247000000001,
+      "instructions": 38357243,
+      "peak_rss_bytes": 13512704
+    },
+    {
+      "test": "tutorial/069_eqRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007803458,
+      "instructions": 58493688,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/070_nRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008184333,
+      "instructions": 48441781,
+      "peak_rss_bytes": 13545472
+    },
+    {
+      "test": "tutorial/071_rbTreeRef",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.02146603,
+      "instructions": 276779293,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/072_boolPropRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008000491,
+      "instructions": 39246466,
+      "peak_rss_bytes": 13533184
+    },
+    {
+      "test": "tutorial/073_BogusRecursor",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007495351000000001,
+      "instructions": 35465101,
+      "peak_rss_bytes": 12730368
+    },
+    {
+      "test": "tutorial/074_existsRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008566351,
+      "instructions": 64858794,
+      "peak_rss_bytes": 13565952
+    },
+    {
+      "test": "tutorial/075_typeSingletonRecReduction",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009916083000000001,
+      "instructions": 87984595,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/076_sortElimPropRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009006403000000001,
+      "instructions": 72968323,
+      "peak_rss_bytes": 13586432
+    },
+    {
+      "test": "tutorial/077_sortElimProp2Rec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.010350157,
+      "instructions": 84915989,
+      "peak_rss_bytes": 13471744
+    },
+    {
+      "test": "tutorial/078_boolRecEqns",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.01288599,
+      "instructions": 133458381,
+      "peak_rss_bytes": 13631488
+    },
+    {
+      "test": "tutorial/079_prodRecEqns",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.013450848000000001,
+      "instructions": 139233066,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/080_nRecReduction",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.014477881000000001,
+      "instructions": 156478701,
+      "peak_rss_bytes": 13570048
+    },
+    {
+      "test": "tutorial/081_listRecReduction",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.021382657000000003,
+      "instructions": 266740453,
+      "peak_rss_bytes": 13553664
+    },
+    {
+      "test": "tutorial/082_RBTree.id_spec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.06191112000000001,
+      "instructions": 958566582,
+      "peak_rss_bytes": 14360576
+    },
+    {
+      "test": "tutorial/083_And.right",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008530687,
+      "instructions": 64025110,
+      "peak_rss_bytes": 13590528
+    },
+    {
+      "test": "tutorial/084_Prod.snd",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009668415000000001,
+      "instructions": 69275279,
+      "peak_rss_bytes": 13561856
+    },
+    {
+      "test": "tutorial/085_PProd.snd",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.010006177,
+      "instructions": 69636789,
+      "peak_rss_bytes": 13484032
+    },
+    {
+      "test": "tutorial/086_PSigma.snd",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009993768,
+      "instructions": 82860605,
+      "peak_rss_bytes": 13565952
+    },
+    {
+      "test": "tutorial/087_projOutOfRange",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.008174169,
+      "instructions": 58544876,
+      "peak_rss_bytes": 13529088
+    },
+    {
+      "test": "tutorial/088_projNotStruct",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.007909125000000001,
+      "instructions": 47061153,
+      "peak_rss_bytes": 12726272
+    },
+    {
+      "test": "tutorial/089_projProp1",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.010575862,
+      "instructions": 94410980,
+      "peak_rss_bytes": 13574144
+    },
+    {
+      "test": "tutorial/090_projProp2",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.010648610000000001,
+      "instructions": 94630284,
+      "peak_rss_bytes": 13578240
+    },
+    {
+      "test": "tutorial/091_projProp3",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.010341063000000001,
+      "instructions": 94715482,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/092_projProp4",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.010103571,
+      "instructions": 94629920,
+      "peak_rss_bytes": 13553664
+    },
+    {
+      "test": "tutorial/093_projProp5",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.010663401000000001,
+      "instructions": 95427807,
+      "peak_rss_bytes": 13484032
+    },
+    {
+      "test": "tutorial/094_projProp6",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.011234328,
+      "instructions": 94312792,
+      "peak_rss_bytes": 13570048
+    },
+    {
+      "test": "tutorial/095_projDataIndexRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009582798,
+      "instructions": 70375180,
+      "peak_rss_bytes": 13496320
+    },
+    {
+      "test": "tutorial/096_projIndexData",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.008987916,
+      "instructions": 69314768,
+      "peak_rss_bytes": 13565952
+    },
+    {
+      "test": "tutorial/097_projIndexData2",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.009282704000000001,
+      "instructions": 69414591,
+      "peak_rss_bytes": 13578240
+    },
+    {
+      "test": "tutorial/098_projRed",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.01209718,
+      "instructions": 114599017,
+      "peak_rss_bytes": 13533184
+    },
+    {
+      "test": "tutorial/099_ruleK",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009906298000000001,
+      "instructions": 84283869,
+      "peak_rss_bytes": 13582336
+    },
+    {
+      "test": "tutorial/100_ruleKbad",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.010560028,
+      "instructions": 85680085,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/101_ruleKAcc",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.01676189,
+      "instructions": 175801731,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/102_aNatLit",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007744450000000001,
+      "instructions": 45511295,
+      "peak_rss_bytes": 13467648
+    },
+    {
+      "test": "tutorial/103_natLitEq",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009034075,
+      "instructions": 76886817,
+      "peak_rss_bytes": 13574144
+    },
+    {
+      "test": "tutorial/104_proofIrrelevance",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009533876,
+      "instructions": 69843957,
+      "peak_rss_bytes": 13529088
+    },
+    {
+      "test": "tutorial/105_proofIrrelevanceBad",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.009290154,
+      "instructions": 68602676,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/106_proofIrrelevanceWhnf",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009223855000000001,
+      "instructions": 75749766,
+      "peak_rss_bytes": 13570048
+    },
+    {
+      "test": "tutorial/107_unitEta1",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008935719,
+      "instructions": 76262387,
+      "peak_rss_bytes": 13496320
+    },
+    {
+      "test": "tutorial/108_unitEta2",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009110318000000001,
+      "instructions": 74020260,
+      "peak_rss_bytes": 13590528
+    },
+    {
+      "test": "tutorial/109_unitEta3",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009832288,
+      "instructions": 74419155,
+      "peak_rss_bytes": 13512704
+    },
+    {
+      "test": "tutorial/110_indexedUnitEta",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.010182007,
+      "instructions": 79388354,
+      "peak_rss_bytes": 13545472
+    },
+    {
+      "test": "tutorial/111_structEta",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.01534655,
+      "instructions": 165707983,
+      "peak_rss_bytes": 13529088
+    },
+    {
+      "test": "tutorial/112_indexedStructEta",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.010695570000000001,
+      "instructions": 88110588,
+      "peak_rss_bytes": 13529088
+    },
+    {
+      "test": "tutorial/113_funEta",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008871683,
+      "instructions": 73726593,
+      "peak_rss_bytes": 13570048
+    },
+    {
+      "test": "tutorial/114_funEtaDep",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008702272,
+      "instructions": 76853407,
+      "peak_rss_bytes": 13516800
+    },
+    {
+      "test": "tutorial/115_funEtaBad",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.009439877000000001,
+      "instructions": 70603523,
+      "peak_rss_bytes": 13574144
+    },
+    {
+      "test": "tutorial/116_etaRuleK",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.009034725,
+      "instructions": 83159437,
+      "peak_rss_bytes": 13533184
+    },
+    {
+      "test": "tutorial/117_etaCtor",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.009473877,
+      "instructions": 91972300,
+      "peak_rss_bytes": 13492224
+    },
+    {
+      "test": "tutorial/118_reflOccLeft",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006798397,
+      "instructions": 48937997,
+      "peak_rss_bytes": 13520896
+    },
+    {
+      "test": "tutorial/119_reflOccInIndex",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006836012000000001,
+      "instructions": 51095955,
+      "peak_rss_bytes": 13533184
+    },
+    {
+      "test": "tutorial/120_reduceCtorParamRefl.mk",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.007518936,
+      "instructions": 64339636,
+      "peak_rss_bytes": 13565952
+    },
+    {
+      "test": "tutorial/121_reduceCtorParamRefl2.mk",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.0077816660000000005,
+      "instructions": 64802893,
+      "peak_rss_bytes": 13594624
+    },
+    {
+      "test": "tutorial/122_rTreeRec",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.008310801000000001,
+      "instructions": 64252123,
+      "peak_rss_bytes": 13561856
+    },
+    {
+      "test": "tutorial/123_rtreeRecReduction",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.011235901000000001,
+      "instructions": 118033190,
+      "peak_rss_bytes": 13549568
+    },
+    {
+      "test": "tutorial/124_accRecType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.014567414,
+      "instructions": 122317461,
+      "peak_rss_bytes": 13529088
+    },
+    {
+      "test": "tutorial/125_accRecReduction",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.018677352,
+      "instructions": 223233011,
+      "peak_rss_bytes": 13492224
+    },
+    {
+      "test": "tutorial/126_accRecNoEta",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.015877808,
+      "instructions": 176960245,
+      "peak_rss_bytes": 13520896
+    },
+    {
+      "test": "tutorial/127_quotMkType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009105911000000001,
+      "instructions": 81151306,
+      "peak_rss_bytes": 13586432
+    },
+    {
+      "test": "tutorial/128_quotIndType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009036328,
+      "instructions": 85090938,
+      "peak_rss_bytes": 13570048
+    },
+    {
+      "test": "tutorial/129_quotLiftType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.009386156000000001,
+      "instructions": 85629526,
+      "peak_rss_bytes": 13496320
+    },
+    {
+      "test": "tutorial/130_quotSoundType",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.010652536,
+      "instructions": 92895999,
+      "peak_rss_bytes": 13565952
+    },
+    {
+      "test": "tutorial/131_quotLiftReduction",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.011623806,
+      "instructions": 119844804,
+      "peak_rss_bytes": 13500416
+    },
+    {
+      "test": "tutorial/132_quotIndReduction",
+      "comparison": "match",
+      "checker_exit": 0,
+      "reference_exit": 0,
+      "seconds": 0.011059850000000001,
+      "instructions": 114195408,
+      "peak_rss_bytes": 13537280
+    },
+    {
+      "test": "tutorial/133_dup_defs",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.005390799,
+      "instructions": 26094850,
+      "peak_rss_bytes": 12808192
+    },
+    {
+      "test": "tutorial/134_dup_ind_def",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.005306834000000001,
+      "instructions": 30372685,
+      "peak_rss_bytes": 12791808
+    },
+    {
+      "test": "tutorial/135_dup_ctor_def",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.0054098770000000004,
+      "instructions": 30894318,
+      "peak_rss_bytes": 12779520
+    },
+    {
+      "test": "tutorial/136_dup_rec_def",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.005290990000000001,
+      "instructions": 30822385,
+      "peak_rss_bytes": 12787712
+    },
+    {
+      "test": "tutorial/137_misnamed_rec_user",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006559583000000001,
+      "instructions": 36273085,
+      "peak_rss_bytes": 13520896
+    },
+    {
+      "test": "tutorial/138_dup_rec_def2",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.005856179,
+      "instructions": 33835357,
+      "peak_rss_bytes": 11980800
+    },
+    {
+      "test": "tutorial/139_dup_ctor_rec",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.0057936870000000005,
+      "instructions": 30729302,
+      "peak_rss_bytes": 12701696
+    },
+    {
+      "test": "tutorial/140_DupConCon",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006380537,
+      "instructions": 33237006,
+      "peak_rss_bytes": 12795904
+    },
+    {
+      "test": "tutorial/141_falseFromUnsafe",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006673933000000001,
+      "instructions": 31747554,
+      "peak_rss_bytes": 12701696
+    },
+    {
+      "test": "tutorial/142_falseFromPartial",
+      "comparison": "match",
+      "checker_exit": 1,
+      "reference_exit": 1,
+      "seconds": 0.006792248000000001,
+      "instructions": 31266647,
+      "peak_rss_bytes": 12742656
+    }
+  ]
+}

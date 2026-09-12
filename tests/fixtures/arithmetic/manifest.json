@@ -1,0 +1,7 @@
+{
+  "toolchain": "leanprover/lean4:v4.33.0-rc2",
+  "exporter_revision": "a3e35a584f59b390667db7269cd37fca8575e4bf",
+  "source": "tests/arithmetic.lean",
+  "source_sha256": "55eea29c0557d6d902d86cb93b1c1e8dce9029ddebafe09715b0d1ad33bc7376",
+  "sha256": "3fd5854f54c7c8b4a49709994fee851a316750fbaee4717f545c49452829b240"
+}
