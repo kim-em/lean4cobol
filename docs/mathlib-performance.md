@@ -43,13 +43,13 @@ variant used temporary-node reclamation and larger arenas but preceded the
 native-hash/helper-entry optimizations. Its successful result establishes that
 the original expression cap was a storage issue, not a rejected proof.
 
-## Final Init measurement
+## Init measurement before validation memoization
 
-The final build accepted Init in **797.669 seconds** (13 minutes 18 seconds),
+The pre-memoization build accepted Init in **797.669 seconds** (13 minutes 18 seconds),
 with **5,194,666,037,130 instructions** and **490,224 KiB peak RSS**. Compared
 with the pinned reference’s 58.096 seconds and 519,949,070,210 instructions,
 this is about 13.7 times the elapsed time and 10.0 times the instruction count.
-Compared with the first fully accepting intermediate COBOL build, the final
+Compared with the first fully accepting intermediate COBOL build, this
 build uses about 68.5% fewer instructions. The shared host affects elapsed-time
 ratios; these are observed whole-process measurements.
 
@@ -57,6 +57,37 @@ The remaining profile shows substantial GnuCOBOL call-frame/local-storage
 allocation and decimal-arithmetic overhead. The port retains the reference’s
 checking algorithms and fuel behavior; further reductions would require more
 substantial changes to its COBOL execution structure.
+
+## Current Init measurement
+
+With validation memoization, Init accepts in **728.415 seconds** (12 minutes
+8 seconds), executing **4,939,477,247,833 instructions**, with **504,012 KiB
+peak RSS**. This is 12.5 times the reference wall time and 9.5 times its
+instruction count. The instruction count is 70.1% below the first accepting
+COBOL intermediate, and 4.9% below the pre-memoization build.
+
+## Mathlib reference measurement
+
+The pinned lean4lean reference accepted all **654,501 checked declarations** in
+**4,247.795 seconds** (1 hour 10 minutes 48 seconds), with
+**14,087,678,816,219 user-space instructions**. CPU time was 3,562.328 seconds
+in user space and 454.663 seconds in the kernel. The COBOL Mathlib run remains
+active; its completed time will be recorded here.
+
+## Shared-DAG validation bottleneck
+
+A subsequent profile of a stalled Mathlib declaration identified repeated
+universe-parameter validation. That pass traversed shared expression DAGs as
+expanded trees. Successful expression and level checks are now memoized by
+both node and allowed parameter list, within the existing declaration-local
+cache. Failures are never cached as successes.
+
+An 18-level shared-DAG test dropped from 1,989,908,925 to 11,855,699
+instructions (about 168 times fewer). A 35-level case, representing more than
+34 billion tree leaves, passes and agrees with lean4lean; omitting its allowed
+universe is still rejected. Init has completed with this correction; the Mathlib measurement is
+still running. The earlier Mathlib trial was stopped as a
+superseded variant, not recorded as a completed check.
 
 ## Changes and why checking remains faithful
 

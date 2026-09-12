@@ -173,6 +173,10 @@ identification division.
 program-id. expr-params-valid recursive.
 data division.
 local-storage section.
+01 cache-family binary-long unsigned value 9.
+01 cached binary-long unsigned.
+01 zero-val binary-long unsigned.
+01 one-val binary-long unsigned value 1.
 01 k binary-long unsigned.
 01 a binary-long unsigned.
 01 b binary-long unsigned.
@@ -192,6 +196,10 @@ procedure division using kernel-state input-expr params depth-val.
     if depth-val >= recursion-limit move 2 to verdict goback end-if
     set address of expr-arena to expr-ptr
     if expr-has-param(input-expr) = 0 goback end-if
+    *> Validation depends only on this immutable node and parameter list.
+    *> Shared DAG branches must not be revisited as an exponentially large tree.
+    call 'tc-cache' using kernel-state cache-family input-expr params zero-val cached
+    if cached not = 0 goback end-if
     move expr-kind(input-expr) to k
     move expr-a(input-expr) to a
     move expr-b(input-expr) to b
@@ -218,6 +226,9 @@ procedure division using kernel-state input-expr params depth-val.
       when 7 call 'expr-params-valid' using kernel-state body-id params next-depth
       when 11 call 'expr-params-valid' using kernel-state a params next-depth
     end-evaluate
+    if verdict = 0
+        call 'tc-cache' using kernel-state cache-family input-expr params one-val cached
+    end-if
     goback.
 end program expr-params-valid.
 
@@ -225,6 +236,10 @@ identification division.
 program-id. level-params-valid recursive.
 data division.
 local-storage section.
+01 cache-family binary-long unsigned value 10.
+01 cached binary-long unsigned.
+01 zero-val binary-long unsigned.
+01 one-val binary-long unsigned value 1.
 01 k binary-long unsigned.
 01 a binary-long unsigned.
 01 b binary-long unsigned.
@@ -242,6 +257,10 @@ procedure division using kernel-state input-level params depth-val.
     if depth-val >= recursion-limit move 2 to verdict goback end-if
     set address of level-arena to level-ptr
     if level-has-param(input-level) = 0 goback end-if
+    *> Validation depends only on this immutable node and parameter list.
+    *> Shared DAG branches must not be revisited as an exponentially large tree.
+    call 'tc-cache' using kernel-state cache-family input-level params zero-val cached
+    if cached not = 0 goback end-if
     move level-kind(input-level) to k
     move level-a(input-level) to a move level-b(input-level) to b
     move depth-val to next-depth
@@ -251,14 +270,17 @@ procedure division using kernel-state input-level params depth-val.
         set address of list-arena to list-ptr
         move params to p
         perform until p = 0
-            if list-a(p) = a goback end-if
+            if list-a(p) = a exit perform end-if
             move list-b(p) to p
         end-perform
-        move 1 to verdict
+        if p = 0 move 1 to verdict end-if
       when 1 call 'level-params-valid' using kernel-state a params next-depth
       when 2 when 3
         call 'level-params-valid' using kernel-state a params next-depth
         call 'level-params-valid' using kernel-state b params next-depth
     end-evaluate
+    if verdict = 0
+        call 'tc-cache' using kernel-state cache-family input-level params one-val cached
+    end-if
     goback.
 end program level-params-valid.

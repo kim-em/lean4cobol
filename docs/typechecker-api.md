@@ -33,9 +33,11 @@ unsigned 32-bit integers; equality answers are unsigned bytes (0 false, 1 true).
 
 `check-declaration` starts a fresh `tc-context` and restores its caller on every
 exit, including failures. Dependency replay now happens before type checking;
-`name-decl` maps to exported records and `name-env` to checked/generated records. Local identifiers remain
-unique for the whole stream. All context cache storage is released when its
-check finishes. Families in `tc-cache` are:
+`name-decl` maps to exported records and `name-env` to checked/generated records.
+Local identifiers are unique among live expressions. Successful ordinary checks
+release their temporary expressions/lists and restore the local-ID watermark.
+All context cache storage is released when its check finishes. Families in
+`tc-cache` are:
 
 | Family | Contents |
 | --- | --- |
@@ -47,6 +49,8 @@ check finishes. Families in `tc-cache` are:
 | 6 | Failed same-definition argument comparisons |
 | 7 | Equivalence union/find parents |
 | 8 | Equivalence union/find ranks |
+| 9 | Successful expression parameter validation, keyed by expression and parameter list |
+| 10 | Successful level parameter validation, keyed by level and parameter list |
 
 Structural equivalence observes the reference's hash gate and recursively uses
 known equivalences. After the hash gate it ignores projection type names and let

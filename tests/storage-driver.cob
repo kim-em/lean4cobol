@@ -20,6 +20,14 @@ copy 'state.cpy'.
 01 buffer-cap binary-long unsigned.
 01 wanted binary-long unsigned value 32.
 01 width binary-long unsigned value 40.
+01 wide-zero binary-double unsigned.
+01 name-u binary-long unsigned.
+01 name-v binary-long unsigned.
+01 level-u binary-long unsigned.
+01 sort-u binary-long unsigned.
+01 params-u binary-long unsigned.
+01 params-v binary-long unsigned.
+01 zero-depth binary-long unsigned.
 linkage section.
 copy 'expr.cpy'.
 01 buffer-data based.
@@ -83,6 +91,21 @@ procedure division.
     move 'last' to buffer-cell(buffer-cap)
     if buffer-cell(buffer-cap)(1:4) not = 'last' move 3 to verdict end-if
     call 'arena-release' using buffer-ptr
+    *> Validation caches must distinguish parameter lists in one context.
+    move 1 to k a width
+    call 'name-intern' using kernel-state k a wide-zero 'u' width name-u
+    call 'name-intern' using kernel-state k a wide-zero 'v' width name-v
+    move 4 to k move 0 to b
+    call 'level-intern' using kernel-state k name-u b level-u
+    move 1 to k
+    call 'expr-intern' using kernel-state k level-u b b b sort-u
+    call 'list-intern' using kernel-state name-u b params-u
+    call 'list-intern' using kernel-state name-v b params-v
+    call 'expr-params-valid' using kernel-state sort-u params-u zero-depth
+    if verdict not = 0 stop run returning 3 end-if
+    call 'expr-params-valid' using kernel-state sort-u params-v zero-depth
+    if verdict not = 1 stop run returning 3 end-if
+    move 0 to verdict
     call 'kernel-free' using kernel-state
     display 'arena growth, hash reclamation, and metadata reuse checked'
     stop run returning verdict.

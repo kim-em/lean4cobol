@@ -62,7 +62,7 @@ proofs; a successful scan does **not** certify any proof.
 Exit codes are 0 for accept, 1 for reject, 2 for unsupported features or resource
 limits, and 3 for operational errors such as an unreadable input file. Lines above
 4,000,000 bytes and JSON nesting beyond 512 levels decline. Raw file blocks are split into lines in COBOL, preserving every input byte.
-Files above 1 GB decline.
+Input is streamed without a whole-file size limit.
 Sparse external IDs use a hash table rather than allocating up to the largest ID.
 
 Universe comparisons can also be tested against the pinned lean4lean revision:

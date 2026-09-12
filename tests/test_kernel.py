@@ -208,6 +208,23 @@ def cases():
         yield f'opaque_{opaque}', s, 1 if opaque else 0
 
 
+    # A compact shared DAG represents a binary tree with 2**35 leaves.
+    # Validation must retain sharing and still reject an undeclared universe.
+    for allowed in (True, False):
+        s = Stream()
+        u = s.level('param', s.name('u'))
+        s.axiom('A', s.sort(u), params=('u',))
+        A = s.const('A', (u,))
+        s.axiom('point', A, params=('u',))
+        s.axiom('combine', s.pi(A, s.pi(A, A)), params=('u',))
+        f = s.const('combine', (u,))
+        term = s.const('point', (u,))
+        for _ in range(35):
+            term = s.app(s.app(f, term), term)
+        s.definition('test', A, term, params=('u',) if allowed else ())
+        yield f'shared_parameter_dag_{allowed}', s, 0 if allowed else 1
+
+
 def run(check):
     count = 0
     for name, s, expected in cases():
