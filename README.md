@@ -29,9 +29,12 @@ quotients, primitive defining-equation checks, and arbitrary-precision natural a
 alongside the dependent-function core. String literals expand for equality,
 projection and recursor reduction, including Unicode scalar decoding.
 
-The unlimited Mathlib benchmark and subsequent optimizations are documented in
-[the Mathlib performance report](docs/mathlib-performance.md). The launcher now
-has no wall-clock timeout.
+**Mathlib accepts in 4 h 19 m 37 s**, using 7.09 GiB peak resident memory.
+The pinned lean4lean reference accepts the same export in 1 h 10 m 48 s.
+The launcher has no wall-clock timeout. Current results cover **211 reference
+matches and four declared declines**, including all 25 performance cases.
+See [the Mathlib performance report](docs/mathlib-performance.md) for the
+optimizations, exact measurements and shared-host timing caveats.
 
 Historical measurements from the earlier, time-limited executable (2026-09-12):
 

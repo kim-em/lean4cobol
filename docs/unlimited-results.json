@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-12",
+  "date": "2026-09-13",
   "reference_revision": "bce3448115f7819fc12d647fadd3bb090666637e",
   "inputs": {
     "_tmp/arena/_build/tests/mathlib.ndjson": {
@@ -77,8 +77,17 @@
     {
       "suite": "mathlib",
       "variant": "with validation memoization",
-      "state": "running",
-      "build": "validation_memoization"
+      "build": "validation_memoization",
+      "exit_code": 0,
+      "seconds": 15576.516371738,
+      "user_seconds": 15301.422992,
+      "system_seconds": 174.47462,
+      "instructions_user": 129625380995922,
+      "max_rss_bytes": 7610122240,
+      "exported_declarations": 670630,
+      "records": 100001405,
+      "final_expression_nodes": 105127374,
+      "log": "_tmp/mathlib-cobol-memo.log"
     }
   ],
   "validation": {
@@ -97,16 +106,18 @@
       "cslib",
       "con-leche"
     ],
-    "arena_reference_matches": 209,
+    "arena_reference_matches": 211,
     "arena_runtime_declines": 0,
     "focused_kernel_reference_cases": 36,
-    "small_arena_reference_report": "tests/generated/arena-small-memo-reference.json"
+    "small_arena_reference_report": "tests/generated/arena-small-memo-reference.json",
+    "arena_measurement_note": "209 cases from the official arena runner, plus Init and Mathlib measured directly on the same arena exports. All agree with the pinned reference; four other libraries remain configured declines.",
+    "performance_suite_correct_cases": 25
   },
   "host_contention": {
     "observed_at_utc": "2026-09-12T21:12:03.187785+00:00",
     "reference_swap_kib": 6781872,
     "optimized_swap_kib": 4121104,
-    "note": "Both processes were paged out under shared-host memory pressure; wall times are not isolated benchmarks."
+    "note": "Reference and superseded pre-memoization COBOL runs were paged out under shared-host memory pressure. Pressure eased before the completed memoized run; the wall-time ratio is not an isolated benchmark."
   },
   "builds": {
     "before_validation_memoization": {
@@ -268,7 +279,8 @@
       },
       "binary_sha256": "083b9bf1954999ad154f2404d4148e6ed0ce898d75ba55525490bf9bd9b269f5",
       "tested_release_binary_sha256": "e5a9cc74f0ed01ff0604bf8071d973a2a2378cf6df0bd3ab8496a33ab9c10628",
-      "binary_note": "Benchmark snapshot and subsequent checked/release rebuild use identical kernel sources. GnuCOBOL embeds compilation timestamps, so rebuild hashes differ."
+      "binary_note": "Benchmark snapshot and subsequent checked/release rebuild use identical kernel sources. GnuCOBOL embeds compilation timestamps, so rebuild hashes differ.",
+      "source_revision": "df3f6f665a7cb01cfb06af453f68a11f9c495c58"
     }
   }
 }
