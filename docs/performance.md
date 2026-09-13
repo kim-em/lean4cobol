@@ -51,8 +51,9 @@ invariants and the release helper-entry transformation.
 All **215 arena inputs** agree with lean4lean: 213 arena runner
 results, plus the direct Init and Mathlib measurements. All 25 performance cases
 return their expected verdicts. Performance runs used a 48 GiB virtual-memory
-ceiling; the six library runs did not. None used a wall timeout. No cases are
-configured or reported as declined.
+ceiling; the six library runs did not. None used a wall timeout. These measured
+runs contain no declines. The arena entry excludes Mathlib from routine runs
+because of its cost; direct checking remains supported.
 [Case results](results.json) and the [CSV table](results.csv) record measurements.
 
 Release and checked regression suites pass. Coverage includes 20,032 hash

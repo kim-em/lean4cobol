@@ -6,3 +6,6 @@ build: nix develop path:. --ignore-environment -c make bin/lean4cobol
 run: |
   ulimit -s unlimited
   exec ./bin/lean4cobol "$IN"
+# Mathlib is supported, but excluded from routine arena runs for cost.
+declines:
+  - mathlib

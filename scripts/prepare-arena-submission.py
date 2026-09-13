@@ -2,6 +2,7 @@
 """Prepare a pinned upstream arena entry and patch, without publishing either."""
 import argparse
 import json
+import re
 from pathlib import Path
 import subprocess
 
@@ -43,10 +44,15 @@ def main():
     measured = results['summary'].get('match', 0)
     unmeasured = [row['test'] for row in results['results'] if row['status'] == 'not_run']
     report_url = url.removesuffix('.git') + f'/blob/{revision}/docs/performance.md'
+    declines = re.search(r'^declines:\n((?:[ \t]+-[^\n]*\n)+)', config, re.M)
+    decline_note = ('The arena entry declines ' + ', '.join(
+        line.strip().removeprefix('-').strip() for line in declines[1].splitlines())
+        + ' for benchmark cost; direct checking remains supported.'
+        if declines else 'No libraries are predeclared as declined.')
     body = (
         'Add lean4cobol, a GnuCOBOL port of lean4lean’s executable kernel, pinned to '
         f'`{revision}`. The Nix build environment is pinned and the launcher has '
-        'no wall-clock timeout. No libraries are predeclared as declined.\n\n'
+        f'no wall-clock timeout. {decline_note}\n\n'
         f'Validation: {measured} measured inputs agree with the pinned lean4lean '
         'reference. Release and checked regression suites pass. The checker uses '
         'exit codes 0/1/2 for acceptance/rejection/resource decline.\n\n'

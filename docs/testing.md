@@ -34,7 +34,9 @@ python3 tests/compare-arena.py
 
 Set `LEAN_KERNEL_ARENA` for a checkout outside `_tmp/arena`. The wrapper stages
 the source and pinned build environment, builds the checker, and invokes the
-official arena runner. No workloads are predeclared as declined. Comparison
+official arena runner. Mathlib is predeclared as declined for benchmark cost;
+use direct invocation to check it. Pass `--declared-declines mathlib` to
+`tests/compare-arena.py` when comparing this arena configuration. Comparison
 requires fresh checker results and reruns the pinned reference without a
 timeout unless `--timeout` is explicitly supplied. Use `--exclude` to omit
 inputs measured separately.

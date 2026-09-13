@@ -21,7 +21,8 @@ The pinned lean4lean reference accepts the same export in 1 h 10 m 48 s.
 All **215 arena inputs** agree with the reference, including the
 142 tutorial and 25 performance cases. See [performance](docs/performance.md)
 for measurements and timing caveats, and [case results](docs/results.json).
-No libraries are configured to be declined without checking.
+The arena entry declines Mathlib to limit benchmark cost. Direct invocation
+still checks Mathlib; the acceptance and timing above are measured results.
 
 The kernel includes dependent functions, nested and mutual inductives,
 constructor/recursor regeneration, projections, structure equality, quotients,
