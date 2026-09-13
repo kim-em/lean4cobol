@@ -1,12 +1,16 @@
 # Performance and validation
 
-Both checkers accept the same exported Init and Mathlib inputs with no
+Both checkers accept the same exported library inputs with no
 wall-clock timeout and an unlimited stack.
 
 | Input | lean4cobol | lean4lean | COBOL peak RSS |
 | --- | ---: | ---: | ---: |
 | Init | 728.415 s | 58.096 s | 492.20 MiB |
 | Mathlib | 15,576.516 s | 4,247.795 s | 7.09 GiB |
+| std | 667.423 s | 152.889 s | 0.95 GiB |
+| cedar | 941.929 s | 129.208 s | 0.94 GiB |
+| cslib | 2,466.673 s | 455.872 s | 3.54 GiB |
+| con-leche | 774.589 s | 120.474 s | 0.97 GiB |
 
 Mathlib took **4 h 19 m 37 s**, compared with **1 h 10 m 48 s** for lean4lean:
 3.67 times the wall time and 9.20 times the user-space instructions.
@@ -27,8 +31,8 @@ complete file. The reference is pinned to
 `bce3448115f7819fc12d647fadd3bb090666637e`, using Lean v4.33.0-rc2.
 
 [benchmarks.json](benchmarks.json) records the exact measured source and binary
-hashes, input hashes, CPU times and instruction counts. Build packaging changes
-do not replace the measured kernel revision or imply a new Mathlib measurement.
+hashes, input hashes, CPU times and instruction counts. The hashes identify
+the binaries and sources used for each measurement.
 
 ## Runtime costs
 
@@ -44,10 +48,11 @@ invariants and the release helper-entry transformation.
 
 ## Coverage
 
-All **211 measured arena inputs** agree with lean4lean: 209 arena runner
+All **215 arena inputs** agree with lean4lean: 213 arena runner
 results, plus the direct Init and Mathlib measurements. All 25 performance cases
 return their expected verdicts. Performance runs used a 48 GiB virtual-memory
-ceiling; the direct Init and Mathlib runs did not. None used a wall timeout.
+ceiling; the six library runs did not. None used a wall timeout. No cases are
+configured or reported as declined.
 [Case results](results.json) and the [CSV table](results.csv) record measurements.
 
 Release and checked regression suites pass. Coverage includes 20,032 hash

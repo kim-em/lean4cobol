@@ -18,7 +18,7 @@ regenerating fixed quotations.
 
 Mathlib accepts in **4 h 19 m 37 s**, using **7.09 GiB peak resident memory**.
 The pinned lean4lean reference accepts the same export in 1 h 10 m 48 s.
-All **211 measured arena inputs** agree with the reference, including the
+All **215 arena inputs** agree with the reference, including the
 142 tutorial and 25 performance cases. See [performance](docs/performance.md)
 for measurements and timing caveats, and [case results](docs/results.json).
 No libraries are configured to be declined without checking.

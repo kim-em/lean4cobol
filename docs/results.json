@@ -2,10 +2,9 @@
   "reference_revision": "bce3448115f7819fc12d647fadd3bb090666637e",
   "source_revision": "df3f6f665a7cb01cfb06af453f68a11f9c495c58",
   "summary": {
-    "match": 211,
-    "not_run": 4
+    "match": 215
   },
-  "note": "209 arena runner measurements plus direct unlimited Init/Mathlib measurements. Reference and checker use the same exports. Performance cases used a 48 GiB virtual-memory ceiling; Init and Mathlib did not. No wall timeout. Unmeasured cases have no checker verdict.",
+  "note": "213 arena runner measurements plus direct unlimited Init/Mathlib measurements. Reference and checker use the same exports. Performance cases used a 48 GiB virtual-memory ceiling; the six library runs did not. No wall timeout.",
   "results": [
     {
       "test": "bogus1",
@@ -25,11 +24,39 @@
     },
     {
       "test": "cedar",
-      "status": "not_run"
+      "status": "match",
+      "checker": {
+        "exit_code": 0,
+        "status": "accepted",
+        "wall_time": 941.928725814,
+        "instructions": 10551732360565,
+        "max_rss": 1010167808
+      },
+      "reference": {
+        "exit_code": 0,
+        "seconds": 129.207529651,
+        "instructions_user": 1064421158928,
+        "max_rss_bytes": 1625919488,
+        "checked_declarations": 133825
+      }
     },
     {
       "test": "con-leche",
-      "status": "not_run"
+      "status": "match",
+      "checker": {
+        "exit_code": 0,
+        "status": "accepted",
+        "wall_time": 774.589258381,
+        "instructions": 10279951056991,
+        "max_rss": 1038217216
+      },
+      "reference": {
+        "exit_code": 0,
+        "seconds": 120.473524101,
+        "instructions_user": 1009935276018,
+        "max_rss_bytes": 1082413056,
+        "checked_declarations": 26558
+      }
     },
     {
       "test": "constlevels",
@@ -289,7 +316,21 @@
     },
     {
       "test": "cslib",
-      "status": "not_run"
+      "status": "match",
+      "checker": {
+        "exit_code": 0,
+        "status": "accepted",
+        "wall_time": 2466.672729285,
+        "instructions": 31571213341005,
+        "max_rss": 3801767936
+      },
+      "reference": {
+        "exit_code": 0,
+        "seconds": 455.871855987,
+        "instructions_user": 3228272083897,
+        "max_rss_bytes": 3879923712,
+        "checked_declarations": 370936
+      }
     },
     {
       "test": "ctor-num-fields",
@@ -1127,7 +1168,21 @@
     },
     {
       "test": "std",
-      "status": "not_run"
+      "status": "match",
+      "checker": {
+        "exit_code": 0,
+        "status": "accepted",
+        "wall_time": 667.4230690510001,
+        "instructions": 8286288570470,
+        "max_rss": 1020510208
+      },
+      "reference": {
+        "exit_code": 0,
+        "seconds": 152.888688417,
+        "instructions_user": 848388555704,
+        "max_rss_bytes": 1073164288,
+        "checked_declarations": 90775
+      }
     },
     {
       "test": "tutorial/001_basicDef",

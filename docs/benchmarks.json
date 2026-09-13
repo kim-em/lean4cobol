@@ -11,6 +11,46 @@
     "_tmp/arena/_build/tests/init.ndjson": {
       "bytes": 324561407,
       "sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91"
+    },
+    "_tmp/arena/_build/tests/std.ndjson": {
+      "bytes": 551674936,
+      "sha256": "0f7993829d6fcc8b07d177a3879024fbbc8908f7c6fd9cb2fa93370e4397e204",
+      "lines": 10023185,
+      "lean4export_version": "3.1.0",
+      "lean_version": "4.29.1",
+      "lean_githash": "f72c35b3f637c8c6571d353742168ab66cc22c00",
+      "source_url": "https://github.com/leanprover/lean-kernel-arena/blob/08affb0326c16bad8d0933a0a2332d52b420ba4a/tests/std_module.lean",
+      "declaration_url": "https://github.com/leanprover/lean-kernel-arena/blob/08affb0326c16bad8d0933a0a2332d52b420ba4a/tests/std.yaml"
+    },
+    "_tmp/arena/_build/tests/cedar.ndjson": {
+      "bytes": 829312995,
+      "sha256": "c51b858ab6c4d9d5864f5dd87ddd49911e5b5923cf32c76c4c960637032a7fc3",
+      "lines": 14581906,
+      "lean4export_version": "3.1.0",
+      "lean_version": "4.29.1",
+      "lean_githash": "f72c35b3f637c8c6571d353742168ab66cc22c00",
+      "source_url": "https://github.com/cedar-policy/cedar-spec//tree/f36af0f9fc038b9e6a340960fc24f3b610a84aee",
+      "declaration_url": "https://github.com/leanprover/lean-kernel-arena/blob/08affb0326c16bad8d0933a0a2332d52b420ba4a/tests/cedar.yaml"
+    },
+    "_tmp/arena/_build/tests/cslib.ndjson": {
+      "bytes": 2145661820,
+      "sha256": "c636b50ee32aed97fa728f3576cbff5663f1f7807c560663b6d7c3722045c58f",
+      "lines": 37534733,
+      "lean4export_version": "3.1.0",
+      "lean_version": "4.30.0",
+      "lean_githash": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+      "source_url": "https://github.com/leanprover/cslib/tree/c7944a9fb44c3298f1a960a5e574ab23a6ab8ed5",
+      "declaration_url": "https://github.com/leanprover/lean-kernel-arena/blob/08affb0326c16bad8d0933a0a2332d52b420ba4a/tests/cslib.yaml"
+    },
+    "_tmp/arena/_build/tests/con-leche.ndjson": {
+      "bytes": 567612971,
+      "sha256": "bf47023cfd2986e67e77095eb7209c58a37ac4e7db649fd7ce5b38da73feb316",
+      "lines": 10290910,
+      "lean4export_version": "3.1.0",
+      "lean_version": "4.33.0",
+      "lean_githash": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+      "source_url": "https://github.com/leanprover/con-leche/tree/3e004805f2b919fd9d636901f80bf1ed87666099",
+      "declaration_url": "https://github.com/leanprover/lean-kernel-arena/blob/08affb0326c16bad8d0933a0a2332d52b420ba4a/tests/con-leche.yaml"
     }
   },
   "measured_build": {
@@ -92,8 +132,9 @@
     },
     "binary_sha256": "083b9bf1954999ad154f2404d4148e6ed0ce898d75ba55525490bf9bd9b269f5",
     "tested_release_binary_sha256": "e5a9cc74f0ed01ff0604bf8071d973a2a2378cf6df0bd3ab8496a33ab9c10628",
-    "binary_note": "Benchmark snapshot and subsequent checked/release rebuild use identical kernel sources. GnuCOBOL embeds compilation timestamps, so rebuild hashes differ.",
-    "source_revision": "df3f6f665a7cb01cfb06af453f68a11f9c495c58"
+    "binary_note": "GnuCOBOL embeds compilation timestamps, so binary hashes can differ across rebuilds of identical sources.",
+    "source_revision": "df3f6f665a7cb01cfb06af453f68a11f9c495c58",
+    "arena_binary_sha256": "e5bffb88e69c2ca5aa522ddc27274747ad4e92bfcdf819fba3428c8bf9d5fb92"
   },
   "runs": [
     {
@@ -138,6 +179,78 @@
       "final_expression_nodes": 105127374,
       "log": "_tmp/mathlib-cobol-memo.log",
       "checker": "lean4cobol"
+    },
+    {
+      "suite": "std",
+      "checker": "lean4lean",
+      "exit_code": 0,
+      "seconds": 152.888688417,
+      "instructions_user": 848388555704,
+      "max_rss_bytes": 1073164288,
+      "checked_declarations": 90775
+    },
+    {
+      "suite": "std",
+      "checker": "lean4cobol",
+      "exit_code": 0,
+      "seconds": 667.4230690510001,
+      "cpu_seconds": 666.823297226,
+      "instructions_user": 8286288570470,
+      "max_rss_bytes": 1020510208
+    },
+    {
+      "suite": "cedar",
+      "checker": "lean4lean",
+      "exit_code": 0,
+      "seconds": 129.207529651,
+      "instructions_user": 1064421158928,
+      "max_rss_bytes": 1625919488,
+      "checked_declarations": 133825
+    },
+    {
+      "suite": "cedar",
+      "checker": "lean4cobol",
+      "exit_code": 0,
+      "seconds": 941.928725814,
+      "cpu_seconds": 941.8447696510001,
+      "instructions_user": 10551732360565,
+      "max_rss_bytes": 1010167808
+    },
+    {
+      "suite": "cslib",
+      "checker": "lean4lean",
+      "exit_code": 0,
+      "seconds": 455.871855987,
+      "instructions_user": 3228272083897,
+      "max_rss_bytes": 3879923712,
+      "checked_declarations": 370936
+    },
+    {
+      "suite": "cslib",
+      "checker": "lean4cobol",
+      "exit_code": 0,
+      "seconds": 2466.672729285,
+      "cpu_seconds": 2465.354092411,
+      "instructions_user": 31571213341005,
+      "max_rss_bytes": 3801767936
+    },
+    {
+      "suite": "con-leche",
+      "checker": "lean4lean",
+      "exit_code": 0,
+      "seconds": 120.473524101,
+      "instructions_user": 1009935276018,
+      "max_rss_bytes": 1082413056,
+      "checked_declarations": 26558
+    },
+    {
+      "suite": "con-leche",
+      "checker": "lean4cobol",
+      "exit_code": 0,
+      "seconds": 774.589258381,
+      "cpu_seconds": 774.51887168,
+      "instructions_user": 10279951056991,
+      "max_rss_bytes": 1038217216
     }
   ],
   "validation": {
@@ -151,16 +264,26 @@
     "tutorial_reference_matches": 142,
     "small_arena_reference_matches": 184,
     "configured_declines": [],
-    "arena_reference_matches": 211,
+    "arena_reference_matches": 215,
     "arena_runtime_declines": 0,
     "focused_kernel_reference_cases": 36,
-    "arena_measurement_note": "209 cases from the arena runner, plus Init and Mathlib measured directly on the same arena exports. All agree with the pinned reference.",
+    "arena_measurement_note": "213 arena runner cases plus direct Init/Mathlib measurements. All 215 inputs agree with the pinned reference; no configured or runtime declines.",
     "performance_suite_correct_cases": 25,
     "additional_suites": {
-      "std": "running",
-      "cedar": "running",
-      "cslib": "running",
-      "con-leche": "running"
+      "std": "accepted; reference match",
+      "cedar": "accepted; reference match",
+      "cslib": "accepted; reference match",
+      "con-leche": "accepted; reference match"
+    },
+    "packaging_checks": {
+      "source_revision": "eff2b53390ac2a321c835fa600d9ba5430fbcaba",
+      "pinned_release_suite": "pass",
+      "pinned_debug_suite": "pass",
+      "mode_switch_and_flag_invalidation": "pass",
+      "clean_source_build": "pass",
+      "clean_source_focused_kernel_cases": 36,
+      "clean_source_nested_cases": 12,
+      "clean_source_init_prelude": "accepted"
     }
   },
   "timing_note": "Shared AMD EPYC 9455 host, Linux 6.12.100, 96 logical CPUs. The reference experienced substantial swapping; memory pressure eased before the COBOL Mathlib run. Wall times are not isolated comparisons."
