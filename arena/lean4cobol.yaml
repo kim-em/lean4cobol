@@ -1,13 +1,8 @@
 description: |
   A GnuCOBOL 3.2 port of lean4lean's executable kernel.
-  Resource limits return decline. See the repository results and progress audit.
+  Checks NDJSON exports with no wall-clock timeout. Resource limits return decline.
 dir: ..
-build: nix shell nixpkgs#gnucobol nixpkgs#gcc nixpkgs#python3 -c make
+build: nix develop path:. --ignore-environment -c make bin/lean4cobol
 run: |
   ulimit -s unlimited
   exec ./bin/lean4cobol "$IN"
-declines:
-  - std
-  - cedar
-  - cslib
-  - con-leche

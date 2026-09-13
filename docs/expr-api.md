@@ -48,4 +48,4 @@ Callers must pass valid arena handles and distinct argument/output variables to
 interning routines. Internal subprograms share `kernel-state.verdict`; after an
 error, calls propagate it without further semantic work. Resource exhaustion is
 2 (decline). Recursive calls use local storage, and the arena launcher gives the
-process an unlimited stack as specified in PLAN.md.
+process an unlimited stack.

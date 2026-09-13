@@ -24,7 +24,7 @@ def main():
     ap.add_argument('--output', type=Path, default=ROOT / 'tests/generated/arena-reference.json')
     ap.add_argument('--timeout', type=int, default=None, help='Optional reference timeout; unlimited by default')
     ap.add_argument('--exclude', nargs='*', default=[], help='Test names/globs measured separately')
-    ap.add_argument('--declared-declines', nargs='*', default=['std', 'cedar', 'cslib', 'con-leche'])
+    ap.add_argument('--declared-declines', nargs='*', default=[])
     args = ap.parse_args()
     revision = subprocess.check_output(['git', '-C', str(args.reference_root), 'rev-parse', 'HEAD'], text=True).strip()
     if revision != REVISION:

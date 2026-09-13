@@ -22,7 +22,7 @@ staging.mkdir(parents=True)
 for name in ('src', 'tests', 'scripts'):
     shutil.copytree(root / name, staging / name,
                     ignore=shutil.ignore_patterns('__pycache__', 'generated'))
-for name in ('Makefile', 'LICENSE', 'NOTICE', 'README.md'):
+for name in ('Makefile', 'flake.nix', 'flake.lock', 'LICENSE', 'NOTICE', 'README.md'):
     shutil.copy2(root / name, staging / name)
 config = (root / 'arena/lean4cobol.yaml').read_text()
 config = config.replace('dir: ..', 'dir: ' + json.dumps(str(staging)))
